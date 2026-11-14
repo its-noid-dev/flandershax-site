@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Info - Flanders Hax</title>
+  <link rel="icon" href="logo.ico" sizes="any">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+
+<div class="disclaimer" role="note">
+  <strong data-i18n="disc_strong"></strong> <span data-i18n="disc_text"></span>
+</div>
+
+<header class="top">
+  <a class="brand" href="index.html">
+    <img src="logo.png" width="40" height="40" alt="Flanders Hax logo">
+    <span>Flanders Hax</span>
+  </a>
+  <nav>
+    <a href="index.html" data-i18n="nav_home"></a>
+    <a href="info.html" data-i18n="nav_info"></a>
+    <button id="themeBtn" class="btn small" type="button" aria-label="Toggle theme"></button>
+  </nav>
+</header>
+
+<main class="doc">
+  <h1 data-i18n="i_h1"></h1>
+
+  <section>
+    <h2 data-i18n="i_who_h"></h2>
+    <p data-i18n="i_who_p"></p>
+    <p class="notice" data-i18n="i_gov"></p>
+  </section>
+
+  <section id="privacy">
+    <h2 data-i18n="i_priv_h"></h2>
+    <p data-i18n="i_priv_p1"></p>
+    <p data-i18n="i_priv_p2"></p>
+
+    <h3 data-i18n="i_ck_h"></h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th data-i18n="t_name"></th><th data-i18n="t_purpose"></th><th data-i18n="t_duration"></th><th data-i18n="t_type"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><code>lang</code></td><td data-i18n="t_lang"></td><td data-i18n="t_until"></td><td>localStorage</td></tr>
+          <tr><td><code>theme</code></td><td data-i18n="t_theme"></td><td data-i18n="t_until"></td><td>localStorage</td></tr>
+          <tr><td><code>consent</code></td><td data-i18n="t_consent"></td><td data-i18n="t_until"></td><td>localStorage</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p data-i18n="i_ck_p"></p>
+
+    <h3 id="form" data-i18n="i_form_h"></h3>
+    <p data-i18n="i_form_p1"></p>
+    <p data-i18n="i_form_p2"></p>
+
+    <h3 data-i18n="i_osm_h"></h3>
+    <p data-i18n="i_osm_p"></p>
+
+    <h3 data-i18n="i_host_h"></h3>
+    <p data-i18n="i_host_p"></p>
+
+    <h3 data-i18n="i_rights_h"></h3>
+    <p data-i18n="i_rights_p"></p>
+
+    <h3 data-i18n="i_contact_h"></h3>
+    <p data-i18n="i_contact_p"></p>
+  </section>
+
+  <p><button class="btn" id="cookieSettings" type="button" data-i18n="foot_cookie"></button></p>
+</main>
+
+<footer>
+  <p data-i18n="foot_made"></p>
+  <p>
+    <a href="info.html" data-i18n="nav_info"></a> ·
+    <button class="linkbtn" id="langSettings" type="button" data-i18n="foot_lang"></button>
+  </p>
+</footer>
+
+<div class="overlay" id="langModal" role="dialog" aria-modal="true" aria-labelledby="langTitle" hidden>
+  <div class="modal">
+    <h2 id="langTitle">Taal / Language</h2>
+    <p>Kies je taal. / Choose your language.</p>
+    <div class="row">
+      <button class="btn" data-lang="nl" type="button">Nederlands</button>
+      <button class="btn" data-lang="en" type="button">English</button>
+    </div>
+    <p class="notice">
+      <strong>NL:</strong> Deze site is gemaakt door een <strong>Hack Clubber</strong> (een tiener), <strong>niet</strong> door de Vlaamse of Belgische overheid.<br>
+      <strong>EN:</strong> This site was made by a <strong>Hack Clubber</strong> (a teenager), <strong>not</strong> by the Flemish or Belgian government.
+    </p>
+    <p class="small">NL: Je keuze wordt lokaal in je browser bewaard. / EN: Your choice is stored locally in your browser.</p>
+  </div>
+</div>
+
+<div class="cookie" id="cookieBanner" role="dialog" aria-labelledby="cookieTitle" hidden>
+  <h2 id="cookieTitle" data-i18n="ck_h"></h2>
+  <p data-i18n="ck_p"></p>
+  <div class="row">
+    <button class="btn" id="ckAccept" type="button" data-i18n="ck_accept"></button>
+    <button class="btn" id="ckDecline" type="button" data-i18n="ck_decline"></button>
+    <a href="info.html#privacy" data-i18n="ck_more"></a>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
